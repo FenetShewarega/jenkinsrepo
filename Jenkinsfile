@@ -1,7 +1,5 @@
 pipeline {
-    agent {
-        label 'my-agent' // Replace 'my-agent' with the label or name of your Jenkins agent
-    }
+    agent any
     stages {
         stage('Checkout') {
             steps {
