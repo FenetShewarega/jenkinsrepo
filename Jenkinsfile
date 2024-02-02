@@ -19,10 +19,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                // Add deployment steps here
-                // For example, you can use 'kubectl' to deploy a Kubernetes application or 'ansible' for server deployments
-                // Replace the placeholders with your actual deployment commands and configurations
-                sh 'kubectl apply -f deployment.yaml' // Example Kubernetes deployment
+               sh 'cp *.py
             }
         }
     }
