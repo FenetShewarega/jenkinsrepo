@@ -19,7 +19,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-               sh 'cp *.py
+               sh 'cp *.py'
             }
         }
     }
