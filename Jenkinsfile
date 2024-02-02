@@ -1,6 +1,10 @@
 pipeline {
-    agent any
-
+    agent {
+        node {
+            // Set the PATH for the Jenkins agent
+            env.PATH = "${tool 'kubectl'}/bin:${env.PATH}"
+        }
+    }
     stages {
         stage('Checkout') {
             steps {
