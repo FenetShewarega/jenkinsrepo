@@ -13,6 +13,12 @@ pipeline {
                 sh 'python3 app.py'
             }
         }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying...'
+                sh 'kubectl apply -f deployment.yaml'
+            }
+        }
         stage('Test') {
             steps {
                 sh 'python3 -m pytest'
